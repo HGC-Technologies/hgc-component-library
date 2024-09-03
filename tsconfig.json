@@ -11,10 +11,11 @@
     "strict": true,
     "moduleResolution": "bundler",  // Change this line
     "esModuleInterop": true,
+    "emitDeclarationOnly": true, 
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "allowImportingTsExtensions": true,  // Enable this option
-    "noEmit": true , // OR "emitDeclarationOnly": true
+    // "noEmit": true , // OR "emitDeclarationOnly": true
     "declaration": true,                // Generate .d.ts files
     "declarationDir": "./dist/types",   // Output directory for .d.ts files
     "outDir": "./dist"
