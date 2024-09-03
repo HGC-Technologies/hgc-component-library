@@ -24,7 +24,7 @@
   // },
   // "include": ["src","src/types" ]
 
-
+  
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
@@ -33,7 +33,9 @@
     "declaration": true,
     "declarationDir": "./dist/types",
     "emitDeclarationOnly": true,
-    "moduleResolution": "node",
+    // "moduleResolution": "node",
+    "allowImportingTsExtensions": true,   // Enable importing with .tsx
+  "moduleResolution": "bundler", 
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
