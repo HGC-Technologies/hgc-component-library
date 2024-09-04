@@ -3,13 +3,21 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "types":"dist/index.d.ts",
+  "exports":{
+  ".":{
+    "import":"./dist/hgc-component-library.es.js",
+    "require":"./dist/hgc-component-library.umd.js"
+  }
+  },
+  "files":["dist"],
   "scripts": {
     "dev": "vite",
     "build": "tsc  && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "dependencies": {
+  "peerDependencies": { 
     "chart.js": "^4.4.4",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
