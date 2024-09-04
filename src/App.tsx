@@ -1,8 +1,8 @@
 
 
 import './App.css'
-import ReactBarChart from './components/ReactBarChart'
-import ReactPieChart from './components/ReactPieChart'
+import ReactBarChart from './components/chart/ReactBarChart'
+import ReactPieChart from './components/chart/ReactPieChart'
 
 function App() {
   const BarChartData= {

@@ -1,17 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
+import dts from "vite-plugin-dts"
 import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    
+    dts({exclude:['**/*test.ts']})
   ],
   build: {
     lib: {
       //entry: path.resolve(__dirname, 'src/components/index.ts'), // Entry point for your library
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: './src/index.ts',
       name: 'hgcComponentLibrary',
       formats: ['es', 'cjs','umd'],
       fileName: (format) => `hgc-component-library.${format}.js`,
