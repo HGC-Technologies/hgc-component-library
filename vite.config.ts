@@ -10,9 +10,10 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/components/index.ts'), // Entry point for your library
-      name: 'MyLibrary',
-      formats: ['es', 'cjs',],
+      //entry: path.resolve(__dirname, 'src/components/index.ts'), // Entry point for your library
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'hgcComponentLibrary',
+      formats: ['es', 'cjs','umd'],
       fileName: (format) => `hgc-component-library.${format}.js`,
     },
     rollupOptions: {
@@ -27,10 +28,7 @@ export default defineConfig({
       },
     },
   },
-  // build: {
-  //   outDir: 'dist',
-  //   sourcemap: true
-  // }
+  
 })
 
 
