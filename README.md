@@ -50,6 +50,17 @@ export default tseslint.config({
 ```
 
 
+
+
+
+## Download the custom component package
+ npm i https://github.com/HGC-Technologies/hgc-component-library.git
+
+
+## import the package
+import {ReactPieChart} from "hgc-component-library"
+import {ReactBarChart} from "hgc-component-library"
+
 ## how to use ReactBarChart and ReactPieChart Component
 
-go to the App.tsx file to look for BarChartData, BarChartOptions ,PieChartData ,PieChartOptions those are the data example with comments to take a reference .
+Open hgc-component-library project and check App.tsx file to look for BarChartData, BarChartOptions ,PieChartData ,PieChartOptions those are the data example with comments to take a reference .
