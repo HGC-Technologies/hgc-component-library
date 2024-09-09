@@ -1,0 +1,10 @@
+{
+  "entryPoints": [
+      "src\\components\\chart\\*",
+  ],
+  "out": "docs",
+  "readme": "README.md",
+  "name": "HGC Component Library Documentation",
+  "tsconfig": "./tsconfig.json",
+  
+}

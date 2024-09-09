@@ -138,7 +138,7 @@ const PieChartOptions= {
   return (
     <>
    
-    <ReactBarChart width={'100%'} height={'400px'}  data={BarChartData} options={BarChartOptions}/>
+    <ReactBarChart width={'600px'} height={'400px'}  data={BarChartData} options={BarChartOptions}/>
      
     <ReactPieChart width={'400px'} height={'600px'} data={PieChartData} options={PieChartOptions}/>
      

@@ -21,12 +21,41 @@ ChartJS.register(
   Legend
 );
 
+/**
+ * Interface for ReactBarChart component props.
+ */
 interface IBarChart {
-    width?:string;
-    height?:string;
-    data?:ChartData<'bar'>;
-    options?:ChartOptions<'bar'>
+  /**
+   * Width of the chart container. Defaults to '600px'.
+   * 
+   * @default '600px'
+   */
+  width?: string;
+
+  /**
+   * Height of the chart container. Defaults to '400px'.
+   * 
+   * @default '400px'
+   */
+  height?: string;
+
+  /**
+   * Data to be displayed by the chart, following Chart.js structure.
+   * 
+   * @default defaultData
+   */
+  data?: ChartData<'bar'>;
+
+  /**
+   * Chart options for customizing the appearance and behavior of the chart.
+   * 
+   * @default defaultOptions
+   */
+  options?: ChartOptions<'bar'>;
 }
+/**
+ * Default chart data used when no data prop is passed.
+ */
 const defaultData:ChartData<'bar'> = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'], 
     datasets: [
@@ -39,7 +68,9 @@ const defaultData:ChartData<'bar'> = {
       }
     ]
   };
-
+/**
+ * Default chart options used when no options prop is passed.
+ */
   const defaultOptions:ChartOptions<'bar'> = {
     indexAxis: "y" as const,
     scales: {
@@ -66,7 +97,19 @@ const defaultData:ChartData<'bar'> = {
         },
       },
   };
-
+/**
+ * React component to display a customizable bar chart using Chart.js.
+ * 
+ * @params width - The width of the chart container (default: '600px').
+ * @params height - The height of the chart container (default: '400px').
+ * @params data - The data for the chart (default: defaultData).
+ * @params options - options - The chart options (default: defaultOptions).
+ * 
+ * @returns A Bar chart rendered within a container.
+ * 
+ * @remarks
+ * This component uses the `useEffect` hook to clean up the chart instance when the component unmounts.
+ */
 const ReactBarChart = ({width="600px",height="400px",data=defaultData,options=defaultOptions}:IBarChart) => {
     useEffect(() => {
         return () => {
