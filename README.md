@@ -157,7 +157,7 @@ options:object
 
 ## ReactBarChart use case
 
-<ReactBarChart width={'600px'} height={'400px'}  data={BarChartData} options={BarChartOptions} />
+< ReactBarChart width={'600px'} height={'400px'}  data={BarChartData} options={BarChartOptions} />
 
 
 
@@ -234,4 +234,5 @@ options:object
 
 ## ReactPieChart use case
 
-<ReactPieChart width={'400px'} height={'600px'} data={PieChartData} options={PieChartOptions} />
+< ReactPieChart width={'400px'} height={'600px'} data={PieChartData} options={PieChartOptions} />
+
