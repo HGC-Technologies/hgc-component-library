@@ -1,4 +1,12 @@
 import { ChartData, ChartOptions } from 'chart.js';
+type DeepPartial<T> = T extends object ? {
+    [P in keyof T]?: DeepPartial<T[P]>;
+} : T;
+type FlexibleChartOptions = DeepPartial<ChartOptions<'bar'>> & {
+    plugins?: {
+        [key: string]: any;
+    };
+};
 /**
  * Interface for ReactBarChart component props.
  */
@@ -26,7 +34,7 @@ interface IBarChart {
      *
      * @default defaultOptions
      */
-    options?: ChartOptions<'bar'>;
+    options?: FlexibleChartOptions;
 }
 /**
  * React component to display a customizable bar chart using Chart.js.

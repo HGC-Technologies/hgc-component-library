@@ -11,6 +11,7 @@ import {
   ChartData,
   ChartOptions,
 } from 'chart.js';
+import ChartDataLabels, { Context } from 'chartjs-plugin-datalabels';
 
 ChartJS.register(
   CategoryScale,
@@ -18,8 +19,28 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  ChartDataLabels
 );
+
+ 
+
+type DeepPartial<T> = T extends object ? {
+  [P in keyof T]?: DeepPartial<T[P]>;
+} : T;
+
+type FlexibleChartOptions = DeepPartial<ChartOptions<'bar'>> & {
+  plugins?: {
+    [key: string]: any;
+  };
+};
+
+// export type ExtendedChartOptions = DeepPartial<ChartOptions<'bar'>> & {
+//   plugins?: {
+//     datalabels?: FlexibleChartOptions ;
+//   };
+// };
+
 
 /**
  * Interface for ReactBarChart component props.
@@ -51,8 +72,11 @@ interface IBarChart {
    * 
    * @default defaultOptions
    */
-  options?: ChartOptions<'bar'>;
+  options?: FlexibleChartOptions;
 }
+
+
+
 /**
  * Default chart data used when no data prop is passed.
  */
@@ -71,7 +95,7 @@ const defaultData:ChartData<'bar'> = {
 /**
  * Default chart options used when no options prop is passed.
  */
-  const defaultOptions:ChartOptions<'bar'> = {
+  const defaultOptions: FlexibleChartOptions = {
     indexAxis: "y" as const,
     scales: {
         x: { 
@@ -95,8 +119,15 @@ const defaultData:ChartData<'bar'> = {
           display: true,
           text: 'Custom Bar Chart', // Example title
         },
+        datalabels: { // Configuration for data labels
+          anchor: 'end',
+          align:'end',
+          color: '#000',
+          formatter: (value:any) => value.toString(),// This will show the actual value
+        },
       },
   };
+
 /**
  * React component to display a customizable bar chart using Chart.js.
  * 
@@ -120,7 +151,7 @@ const ReactBarChart = ({width="600px",height="400px",data=defaultData,options=de
 
     return (
       <div style={{ width: width, height: height }}>
-        <Bar data={data} options={options} />
+        <Bar data={data} options={options as ChartOptions<'bar'>} />
       </div>
     );
 }

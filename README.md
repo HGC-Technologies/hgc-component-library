@@ -151,6 +151,20 @@ options:object
             size: 18, // Adjust the size as needed
             weight: 'normal' as const, // Use 100,300,400,500,700,900 'normal' "bold"
           },
+          datalabels: { // Configuration for data labels
+          anchor: 'end',
+          align:'end',
+//           The label box alignment relative to anchor that can be expressed either by a number representing the clockwise angle (in degree) or a by one of the following string presets:
+//            'start': before the anchor point, following the same direction
+//            'end': after the anchor point, following the same direction
+//            'center': centered on the anchor point
+//            'right': 0°
+//            'bottom': 90°
+//            'left': 180°
+//            'top': 270°
+          color: '#000',
+          formatter: (value:any) => value.toString(), // This will show the actual value
+        },
         },
       },
   };

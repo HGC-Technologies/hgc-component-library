@@ -1,7 +1,7 @@
 {
   "name": "hgc-component-library",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "types": "dist/index.d.ts",
   "exports": {
@@ -41,5 +41,8 @@
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1",
     "vite-plugin-dts": "^4.1.0"
+  },
+  "dependencies": {
+    "chartjs-plugin-datalabels": "^2.2.0"
   }
 }
