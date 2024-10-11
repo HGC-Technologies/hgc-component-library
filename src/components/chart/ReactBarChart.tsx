@@ -30,7 +30,7 @@ type DeepPartial<T> = T extends object ? {
 } : T;
 
 type FlexibleChartOptions = DeepPartial<ChartOptions<'bar'>> & {
-  indexAxis?: "y" | "x",
+  indexAxis?: string,
   plugins?: {
     [key: string]: any;
   };
