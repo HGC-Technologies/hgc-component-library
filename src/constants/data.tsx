@@ -176,5 +176,7 @@ export const BarLineData: ChartData<'bar' | 'line'> = {
         display: true,
         text: 'Combo Bar-Line Chart Example',
       },
-    },
+      datalabels: {
+        display: false, 
+      },}
   };

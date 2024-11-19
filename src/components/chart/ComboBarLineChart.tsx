@@ -3,6 +3,7 @@ import React from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, LineElement, Title, Tooltip, Legend, PointElement, LineController, BarController } from 'chart.js';
 import { Chart } from 'react-chartjs-2';
 import { ChartData, ChartOptions } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 // Register Chart.js components
 ChartJS.register(
@@ -13,6 +14,7 @@ ChartJS.register(
   PointElement,
   LineController,
   BarController,
+  ChartDataLabels,
   Title,
   Tooltip,
   Legend
