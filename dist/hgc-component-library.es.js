@@ -1,6 +1,6 @@
-import Cr, { useEffect as Or } from "react";
-import { Bar as kt, Pie as St } from "react-chartjs-2";
-import { defaults as Ct, ArcElement as Pr, PointElement as Tr, BarElement as Ne, Chart as oe, CategoryScale as Mr, LinearScale as jr, Title as Fr, Tooltip as Be, Legend as Ue, LineElement as Ot, LineController as Pt, BarController as Tt } from "chart.js";
+import { defaults as kt, ArcElement as Cr, PointElement as Or, BarElement as Ne, Chart as oe, CategoryScale as Pr, LinearScale as Tr, Title as Mr, Tooltip as Be, Legend as Ue, LineElement as St, LineController as Ct, BarController as Ot } from "chart.js";
+import jr, { useEffect as Fr } from "react";
+import { Bar as Pt, Pie as Tt } from "react-chartjs-2";
 var Ie = { exports: {} }, Q = {};
 /**
  * @license React
@@ -15,7 +15,7 @@ var yr;
 function Mt() {
   if (yr) return Q;
   yr = 1;
-  var e = Cr, r = Symbol.for("react.element"), t = Symbol.for("react.fragment"), n = Object.prototype.hasOwnProperty, a = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, o = { key: !0, ref: !0, __self: !0, __source: !0 };
+  var e = jr, r = Symbol.for("react.element"), t = Symbol.for("react.fragment"), n = Object.prototype.hasOwnProperty, a = e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, o = { key: !0, ref: !0, __self: !0, __source: !0 };
   function s(l, u, c) {
     var h, b = {}, R = null, W = null;
     c !== void 0 && (R = "" + c), u.key !== void 0 && (R = "" + u.key), u.ref !== void 0 && (W = u.ref);
@@ -38,7 +38,7 @@ var ee = {};
 var pr;
 function jt() {
   return pr || (pr = 1, process.env.NODE_ENV !== "production" && function() {
-    var e = Cr, r = Symbol.for("react.element"), t = Symbol.for("react.portal"), n = Symbol.for("react.fragment"), a = Symbol.for("react.strict_mode"), o = Symbol.for("react.profiler"), s = Symbol.for("react.provider"), l = Symbol.for("react.context"), u = Symbol.for("react.forward_ref"), c = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), b = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), W = Symbol.for("react.offscreen"), V = Symbol.iterator, Z = "@@iterator";
+    var e = jr, r = Symbol.for("react.element"), t = Symbol.for("react.portal"), n = Symbol.for("react.fragment"), a = Symbol.for("react.strict_mode"), o = Symbol.for("react.profiler"), s = Symbol.for("react.provider"), l = Symbol.for("react.context"), u = Symbol.for("react.forward_ref"), c = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), b = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), W = Symbol.for("react.offscreen"), V = Symbol.iterator, Z = "@@iterator";
     function fe(i) {
       if (i === null || typeof i != "object")
         return null;
@@ -1702,7 +1702,7 @@ function Fn(e, r) {
   return e.horizontal ? { x: n, y: null } : { x: null, y: n };
 }
 function An(e) {
-  return e instanceof Pr ? me.arc : e instanceof Tr ? me.point : e instanceof Ne ? me.bar : me.fallback;
+  return e instanceof Cr ? me.arc : e instanceof Or ? me.point : e instanceof Ne ? me.bar : me.fallback;
 }
 function Dn(e, r, t, n, a, o) {
   var s = Math.PI / 2;
@@ -1757,7 +1757,7 @@ Y(Ur.prototype, {
    * @private
    */
   _modelize: function(e, r, t, n) {
-    var a = this, o = a._index, s = Cn(E([t.font, {}], n, o)), l = E([t.color, Ct.color], n, o);
+    var a = this, o = a._index, s = Cn(E([t.font, {}], n, o)), l = E([t.color, kt.color], n, o);
     return {
       align: E([t.align, "center"], n, o),
       anchor: E([t.anchor, "center"], n, o),
@@ -2111,10 +2111,10 @@ var Gn = {
   }
 };
 oe.register(
-  Mr,
-  jr,
+  Pr,
+  Tr,
   Ne,
-  Fr,
+  Mr,
   Be,
   Ue,
   Gn
@@ -2167,12 +2167,12 @@ const Kn = {
       // This will show the actual value
     }
   }
-}, aa = ({ width: e = "600px", height: r = "400px", data: t = Kn, options: n = Jn }) => (Or(() => () => {
+}, aa = ({ width: e = "600px", height: r = "400px", data: t = Kn, options: n = Jn }) => (Fr(() => () => {
   var a;
   (a = oe.getChart("chartCanvasId")) == null || a.destroy();
-}, []), /* @__PURE__ */ xe.jsx("div", { style: { width: e, height: r }, children: /* @__PURE__ */ xe.jsx(kt, { data: t, options: n }) }));
+}, []), /* @__PURE__ */ xe.jsx("div", { style: { width: e, height: r }, children: /* @__PURE__ */ xe.jsx(Pt, { data: t, options: n }) }));
 oe.register(
-  Pr,
+  Cr,
   Be,
   Ue
 );
@@ -2211,22 +2211,22 @@ const Qn = {
       enabled: !0
     }
   }
-}, ia = ({ width: e = "400px", height: r = "600px", data: t = Qn, options: n = ea }) => (Or(() => () => {
+}, ia = ({ width: e = "400px", height: r = "600px", data: t = Qn, options: n = ea }) => (Fr(() => () => {
   var a;
   (a = oe.getChart("chartCanvasId")) == null || a.destroy();
 }, []), /* @__PURE__ */ xe.jsxs("div", { style: { width: e, height: r }, children: [
   " ",
-  /* @__PURE__ */ xe.jsx(St, { data: t, options: n })
+  /* @__PURE__ */ xe.jsx(Tt, { data: t, options: n })
 ] }));
 oe.register(
-  Mr,
-  jr,
-  Ne,
-  Ot,
+  Pr,
   Tr,
-  Pt,
-  Tt,
-  Fr,
+  Ne,
+  St,
+  Or,
+  Ct,
+  Ot,
+  Mr,
   Be,
   Ue
 );

@@ -1,4 +1,4 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const Ee=require("react"),kr=require("react-chartjs-2"),m=require("chart.js");var Ye={exports:{}},ee={};/**
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const m=require("chart.js"),Ee=require("react"),kr=require("react-chartjs-2");var Ye={exports:{}},ee={};/**
  * @license React
  * react-jsx-runtime.production.min.js
  *
