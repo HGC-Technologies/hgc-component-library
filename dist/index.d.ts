@@ -1,1 +1,1 @@
-export { ReactPieChart, ReactBarChart } from './components/chart';
+export { ReactPieChart, ReactBarChart, ComboBarLineChart, ChartData, ChartOptions } from './components/chart';
