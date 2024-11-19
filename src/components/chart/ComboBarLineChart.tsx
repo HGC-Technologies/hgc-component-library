@@ -19,14 +19,14 @@ ChartJS.register(
 );
 
 interface ComboBarLineChartProps {
-  data: ChartData<'bar' | 'line'>;
-  options?: ChartOptions<'bar' | 'line'>;
+  data: ChartData<'bar' | 'line'> | any;
+  options?: ChartOptions<'bar' | 'line'> | any;
 }
 
-const ComboBarLineChart: React.FC<ComboBarLineChartProps> = ({data, options}) => {
+export default function ComboBarLineChart({data, options}: ComboBarLineChartProps) {
   
 
   return <Chart type='bar' data={data} options={options} />;
 };
 
-export default ComboBarLineChart;
+

@@ -1,8 +1,7 @@
-import { default as React } from 'react';
 import { ChartData, ChartOptions } from 'chart.js';
 interface ComboBarLineChartProps {
-    data: ChartData<'bar' | 'line'>;
-    options?: ChartOptions<'bar' | 'line'>;
+    data: ChartData<'bar' | 'line'> | any;
+    options?: ChartOptions<'bar' | 'line'> | any;
 }
-declare const ComboBarLineChart: React.FC<ComboBarLineChartProps>;
-export default ComboBarLineChart;
+export default function ComboBarLineChart({ data, options }: ComboBarLineChartProps): import("react/jsx-runtime").JSX.Element;
+export {};
