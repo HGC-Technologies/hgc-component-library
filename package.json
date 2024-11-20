@@ -1,7 +1,7 @@
 {
   "name": "hgc-component-library",
   "private": true,
-  "version": "1.0.13",
+  "version": "1.0.14",
   "type": "module",
   "types": "dist/index.d.ts",
   "exports": {
@@ -9,10 +9,10 @@
       "import": "./dist/hgc-component-library.es.js",
       "require": "./dist/hgc-component-library.umd.js"
     },
-    "./components/chart/ComboBarLineChart": {
-    "import": "./dist/components/chart/ComboBarLineChart.ts",
-    "require": "./dist/components/chart/ComboBarLineChart.ts"
-  }
+    "./components/chart/*": {
+      "import": "./dist/components/chart/*.js",
+      "require": "./dist/components/chart/*.js"
+    }
   },
   "files": [
     "dist"
