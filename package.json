@@ -1,18 +1,25 @@
 {
   "name": "hgc-component-library",
   "private": true,
-  "version": "1.0.14",
+  "version": "1.0.15",
   "type": "module",
   "types": "dist/index.d.ts",
+  "typesVersions": {
+  "*": {
+    "components/chart/ComboBarLineChart": [
+      "dist/components/chart/ComboBarLineChart.d.ts"
+    ]
+  }
+},
   "exports": {
     ".": {
-      "import": "./dist/hgc-component-library.es.js",
-      "require": "./dist/hgc-component-library.umd.js"
-    },
-    "./components/chart/ComboBarLineChart": {
-      "import": "./dist/components/chart/ComboBarLineChart.js",
-      "require": "./dist/components/chart/ComboBarLineChart.js"
-    }
+    "import": "./dist/hgc-component-library.es.js",
+    "require": "./dist/hgc-component-library.umd.js"
+  },
+  "./components/chart/ComboBarLineChart": {
+    "import": "./dist/components/chart/ComboBarLineChart.js",
+    "require": "./dist/components/chart/ComboBarLineChart.js"
+  }
   },
   "files": [
     "dist"
