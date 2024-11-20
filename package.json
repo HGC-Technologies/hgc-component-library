@@ -6,8 +6,8 @@
   "types": "dist/index.d.ts",
   "typesVersions": {
   "*": {
-    "components/chart/ComboBarLineChart": [
-      "dist/components/chart/ComboBarLineChart.d.ts"
+   "components/*": [
+      "dist/components/*/index.d.ts"
     ]
   }
 },
@@ -16,9 +16,9 @@
     "import": "./dist/hgc-component-library.es.js",
     "require": "./dist/hgc-component-library.umd.js"
   },
-  "./components/chart/ComboBarLineChart": {
-    "import": "./dist/components/chart/ComboBarLineChart.js",
-    "require": "./dist/components/chart/ComboBarLineChart.js"
+  "./components/*": {
+    "import": "./dist/components/*/*.js",
+    "require": "./dist/components/*/*.js"
   }
   },
   "files": [
