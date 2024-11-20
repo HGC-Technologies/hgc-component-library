@@ -17,7 +17,7 @@
     "require": "./dist/hgc-component-library.umd.js"
   },
   "./components/*": {
-    "import": "./dist/components/*/*.js",
+    "import": "./dist/components/*/.js",
     "require": "./dist/components/*/*.js"
   }
   },
