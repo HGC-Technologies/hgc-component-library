@@ -1,25 +1,25 @@
 {
   "name": "hgc-component-library",
   "private": true,
-  "version": "1.0.17",
+  "version": "1.0.18",
   "type": "module",
   "types": "dist/index.d.ts",
   "typesVersions": {
-  "*": {
-   "components/*": [
-      "dist/components/*/index.d.ts"
-    ]
-  }
-},
+    "*": {
+      "components/*": [
+        "dist/components/*/index.d.ts"
+      ]
+    }
+  },
   "exports": {
     ".": {
-    "import": "./dist/hgc-component-library.es.js",
-    "require": "./dist/hgc-component-library.umd.js"
-  },
-  "./components/*": {
-    "import": "./dist/components/*/.js",
-    "require": "./dist/components/*/*.js"
-  }
+      "import": "./dist/hgc-component-library.es.js",
+      "require": "./dist/hgc-component-library.umd.js"
+    },
+    "./components/*": {
+      "import": "./dist/components/*/.js",
+      "require": "./dist/components/*/*.js"
+    }
   },
   "files": [
     "dist"
@@ -30,12 +30,6 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "doc": "npx typedoc"
-  },
-  "peerDependencies": {
-    "chart.js": "^4.4.4",
-    "react": "^18.3.1",
-    "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.27.0",
@@ -54,6 +48,9 @@
     "vite-plugin-dts": "^4.5.4"
   },
   "dependencies": {
-    "chartjs-plugin-datalabels": "^2.2.0"
+    "chart.js": "^4.4.9",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^19.1.0"
   }
 }

@@ -1,8 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dts from "vite-plugin-dts"
-import {peerDependencies} from "./package.json"
-import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -20,7 +18,6 @@ export default defineConfig({
     rollupOptions: {
       // Make sure to externalize deps that shouldn't be bundled into your library
       // external: ['react', 'react-dom'],
-      external: Object.keys(peerDependencies),
       output: {
         // Provide global variables to use in the UMD build for externalized deps
         globals: {
